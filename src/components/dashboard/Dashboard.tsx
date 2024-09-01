@@ -3,7 +3,7 @@ import Button from "../button/CustomButton";
 const Dashboard = () => {
   return (
     <>
-      <div className="relative w-full px-5  md:px-[120px] pt-[50px] md:pt-[80px]">
+      <div className="relative w-full px-5  md:px-[120px] pt-[1px] md:pt-[80px]">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-center w-full md:max-w-3xl text-white font-bold text-[40px] md:text-[60px] mb-4 leading-tight">
             Advanced analytics to grow your business

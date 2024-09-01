@@ -2,11 +2,11 @@ import { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import CustomAnalyticBox from "../common/box/CustomAnalyticBox";
 import { FaPhone, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
-import GraphAnalytics from "../../assets/dashboard/Graph.png";
 import CustomSocialMediaBox from "../common/box/CustomSocialMediaBox";
 import { FaSquareFacebook } from "react-icons/fa6";
 import ShadowGraph from "../../assets/dashboard/Shadow.png";
 import GraphHorizontal from "../../assets/dashboard/Vector2.png";
+import CreditBalance from "../common/CreditBalance";
 
 const Analytics = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -16,7 +16,7 @@ const Analytics = () => {
   };
 
   return (
-    <div className="w-full flex flex-col p-3 md:p-8  bg-gradient-combined rounded-md  main-container mx-[20px] lg:mx-[150px]">
+    <div className="w-full flex flex-col p-3 md:p-8  bg-gradient-combined rounded-md mt-[600px]  mx-[20px] lg:mx-[150px] shadow-sm">
       <div className="w-full flex gap-5 items-center pr-10">
         <BsThreeDots color="white" size={40} />
         <div className="w-full">
@@ -30,7 +30,7 @@ const Analytics = () => {
         </div>
       </div>
 
-      <div className="bg-white  rounded-md mt-2 p-2 md:p-4 ">
+      <div className="bg-white  rounded-md mt-2 p-2 md:p-4  shadow-sm">
         <div className="grid grid-cols-3 gap-2 md:gap-5 mb-4">
           <CustomAnalyticBox
             title="All Traffic"
@@ -54,25 +54,7 @@ const Analytics = () => {
 
         <div className="grid grid-cols-2 gap-1 md:gap-5 mb-2 md:mb-4">
           <div className="border-[0.1px] p-2 md:p-4 rounded-md ">
-            <div className="w-full flex rounded-xl overflow-hidden">
-              <div className="w-3/5 flex flex-col justify-center bg-[#7545FF] pl-3 rounded-l-xl">
-                <div>
-                  <p className="text-white font-medium text-[7px] md:text-[16px]">
-                    Credit Balance
-                  </p>
-                  <p className="text-white font-bold text-[11px] md:text-[32px]">
-                    $25,512
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative w-2/5 flex flex-col gap-2 md:gap-10 justify-end items-end bg-[#527FED] p-1 md:p-5">
-                <div className="absolute top-0 left-[-10px] md:left-[-40px] h-full w-[10px] md:w-[80px] bg-[#7545FF] transform -skew-x-[30deg] hidden md:block"></div>
-
-                <BsThreeDots size={30} color="white" />
-                <img src={GraphAnalytics} alt="Graph" className="h-5 w-16" />
-              </div>
-            </div>
+            <CreditBalance />
 
             <div className="">
               <p className="text-[#CDD0D8] font-medium text-[5px] md:text-[14px] py-2 md:py-4">

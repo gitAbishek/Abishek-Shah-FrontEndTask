@@ -10,7 +10,25 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartOptions,
 } from "chart.js";
+
+// Extend the ChartOptions with annotation options
+interface ExtendedChartOptions extends ChartOptions<"line"> {
+  plugins?: {
+    legend?: {
+      display: boolean;
+    };
+    tooltip?: {
+      enabled: boolean;
+    };
+    annotation?: {
+      annotations: {
+        [key: string]: any;
+      };
+    };
+  };
+}
 
 ChartJS.register(
   CategoryScale,
@@ -43,46 +61,47 @@ const data = {
       pointBackgroundColor: "#ffffff",
       pointBorderColor: "#0097FE",
       pointBorderWidth: 2.5,
-      pointRadius: function (context) {
+      pointRadius: function (context: { dataIndex: number }) {
         const index = context.dataIndex;
-        return index === 4 ? 6 : 0; // Highlight the point at index 2 (12:30 AM)
+        return index === 4 ? 6 : 0; // Highlight the point at index 4 (12:30 AM)
       },
       pointHoverRadius: 8,
-      tension: 0.4, // Creates the smooth curve
-      fill: true, // Fills the area under the curve
-      backgroundColor: "rgba(0, 88, 255, 0.1)", // Light fill color under the curve
+      tension: 0.4,
+      fill: true,
+      backgroundColor: "rgba(0, 88, 255, 0.1)",
     },
   ],
 };
 
-const options = {
+// Type the options object properly
+const options: ExtendedChartOptions = {
   responsive: true,
   plugins: {
     legend: {
-      display: false, // Hides the legend
+      display: false,
     },
     tooltip: {
-      enabled: true, // Enables tooltips on hover
+      enabled: true,
     },
     annotation: {
       annotations: {
         verticalLine: {
           type: "line",
-          xMin: "12:30 AM", // Set the x-axis label where the vertical line should be
-          xMax: "12:30 AM", // Same as xMin to make it a vertical line
+          xMin: "12:30 AM",
+          xMax: "12:30 AM",
           yMin: 0,
           yMax: 58,
-          borderColor: "#E6E8EC", // Color of the line
-          borderWidth: 1, // Thickness of the line
+          borderColor: "#E6E8EC",
+          borderWidth: 1,
         },
         point1: {
           type: "point",
-          xValue: "12:30 AM", // X-axis label where the point should appear
-          yValue: 12, // Set Y to 0 to place it on the X-axis
-          backgroundColor: "#FFFFFF", // Color of the point
-          radius: 4, // Size of the point
-          borderWidth: 2, // Border thickness of the point
-          borderColor: "#0097FE", // Border color of the point
+          xValue: "12:30 AM",
+          yValue: 12,
+          backgroundColor: "#FFFFFF",
+          radius: 4,
+          borderWidth: 2,
+          borderColor: "#0097FE",
         },
       },
     },
@@ -90,15 +109,16 @@ const options = {
   scales: {
     x: {
       grid: {
-        display: false, // Hides the vertical grid lines
+        display: false,
       },
       border: {
-        display: true, // Shows the X-axis border
-        color: "#ccc", // Adjust border color as needed
+        display: true,
+        color: "#ccc",
       },
       ticks: {
-        callback: function (value, index) {
-          // Show only specific labels, like every second one
+        callback: function (value: string | number) {
+          // Correct typing for callback function
+          const index = Number(value);
           return index % 2 === 0 ? data.labels[index] : "";
         },
         maxRotation: 0,
@@ -109,15 +129,14 @@ const options = {
       min: 10,
       max: 85,
       ticks: {
-        display: false, // Hides Y-axis labels
+        display: false,
       },
       grid: {
-        drawBorder: true, // Shows the Y-axis border
-        color: "transparent", // Makes the grid lines transparent
+        color: "transparent",
       },
       border: {
-        display: true, // Shows the Y-axis border
-        color: "#ccc", // Adjust border color as needed
+        display: true,
+        color: "#ccc",
       },
     },
   },
@@ -125,7 +144,10 @@ const options = {
 
 const CustomLineChart: React.FC = () => {
   return (
-    <div style={{ position: "relative", height: "221px", width: "455px" }}>
+    <div
+      style={{ position: "relative" }}
+      className="right-3 z-10 h-[200px] md:h-[225px] w-[330px] md:w-[330px] lg:w-[500px]"
+    >
       <Line data={data} options={options} />
     </div>
   );

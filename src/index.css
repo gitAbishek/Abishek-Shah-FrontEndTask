@@ -83,17 +83,41 @@
     /* Creates a 20% slant */
 }
 
-.analytics-dashboard-gradient {
-    /* position: absolute; */
-    top: -10%;
-    left: -10%;
-    right: -10%;
-    bottom: -10%;
-    background: linear-gradient(
-      to bottom right,
-      rgba(0, 118, 255, 0.4),
-      rgba(234, 76, 137, 0.4)
-    );
-    filter: blur(50px); /* Blurs the gradient for a smooth effect */
-    z-index: -1; /* Place gradient behind the content */
+.bg-gradient-combined {
+    /* background:
+      radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 70%),
+      linear-gradient(to bottom, rgba(77, 91, 226, 0.9) 0%, rgba(77, 91, 226, 0) 30%),
+          url('/src/assets/dashboard/noiseTexture.png');
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-position: center;
+      background-repeat: no-repeat; */
+    /* position: absolute;
+      top: -10%;
+      left: -10%;
+      right: -10%;
+      bottom: -10%; */
+    background: 
+      linear-gradient(to top, #ffffff 50%, #899dd9);
+    background-repeat: repeat, no-repeat, no-repeat; /* Noise texture repeats, gradients do not */
+  
+    /* z-index: -1; Place gradient behind the content */
+  }
+
+  .shadow-custom {
+    position: relative;
+    /* Add the gradient shadow effect */
+  }
+  
+  .shadow-custom::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust distance from the bottom */
+    right: -10px; /* Adjust distance from the right */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(244, 245, 254, 0.5) 0%, rgba(244, 245, 254, 0) 100%);
+    z-index: -1; /* Ensure the shadow is behind the content */
+    pointer-events: none; /* Make sure the shadow doesn’t interfere with user interaction */
+    border-radius: inherit; /* Ensure the shadow follows the border-radius of the parent element if any */
   }

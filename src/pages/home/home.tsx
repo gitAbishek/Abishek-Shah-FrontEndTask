@@ -34,8 +34,8 @@ const Home = () => {
         <Navbar />
         <Dashboard />
 
-        <div className="relative z-20">
-          <div className="absolute top-20 inset-0 left-0 right-0 flex justify-center items-center w-full">
+        <div className="z-20 shadow-custom">
+          <div className="absolute top-0 md:top-20 inset-0 left-0 right-0 flex justify-center items-center w-full">
             <Analytics />
           </div>
         </div>
@@ -56,5 +56,3 @@ const Home = () => {
 };
 
 export default Home;
-
-//bg-[url(src/assets/dashboard/BackgroundHeroSmall.png)] md:bg-[url(src/assets/dashboard/BackgroundHeroLarge.png)] bg-no-repeat parent-body
