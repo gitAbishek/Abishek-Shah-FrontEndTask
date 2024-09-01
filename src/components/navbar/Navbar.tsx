@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Button from "../button/CustomButton";
 import PATH from "../../constants/path";
+import { IoMdMenu } from "react-icons/io";
+
 
 const Navbar = () => {
   const getNavLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -47,9 +49,12 @@ const Navbar = () => {
         </NavLink>
         <Button
           title="Sign Up"
-          styles="border rounded-md py-2 text-white text-4 font-bold text-[14px]"
+          styles="border rounded-md py-2 text-white text-4 font-bold text-[14px]  "
         />
       </div>
+
+      <IoMdMenu color="white" size={32} className="block md:hidden h-[32px]" />
+      
     </div>
   );
 };

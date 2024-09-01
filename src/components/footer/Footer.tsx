@@ -1,4 +1,4 @@
-import {  FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 import Button from "../button/CustomButton";
 import CustomBorder from "../common/border/CustomBorder";
 import { FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
@@ -66,25 +66,46 @@ const Footer = () => {
               id nisl tellus rhoncus, imperdiet.
             </p>
             <div className="flex space-x-3">
-              <div className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer">
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer"
+              >
                 🌐
-              </div>
-              <div className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer">
-                {" "}
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer"
+              >
                 <FaFacebookF />
-              </div>
-              <div className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer">
-                {" "}
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer"
+              >
                 <FaTwitter />
-              </div>
-              <div className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer">
-                {" "}
+              </a>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer"
+              >
                 <FaGoogle />
-              </div>
-              <div className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer">
-                {" "}
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center rounded-md text-center bg-[#006EEA] h-10 w-10 text-white hover:border-[1px] border-white hover:bg-transparent cursor-pointer"
+              >
                 <FaLinkedinIn />
-              </div>
+              </a>
             </div>
           </div>
 

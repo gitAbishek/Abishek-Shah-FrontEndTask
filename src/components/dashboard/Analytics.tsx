@@ -7,6 +7,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import ShadowGraph from "../../assets/dashboard/Shadow.png";
 import GraphHorizontal from "../../assets/dashboard/Vector2.png";
 import CreditBalance from "../common/CreditBalance";
+import { HiMiniArrowTrendingUp } from "react-icons/hi2";
 
 const Analytics = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -16,7 +17,7 @@ const Analytics = () => {
   };
 
   return (
-    <div className="w-full flex flex-col p-3 md:p-8  bg-gradient-combined rounded-md mt-[600px]  mx-[20px] lg:mx-[150px] shadow-sm">
+    <div className="w-full flex flex-col p-3 md:p-8  bg-gradient-combined rounded-md mt-[500px] md:mt-[600px]  mx-[20px] lg:mx-[150px] shadow-sm">
       <div className="w-full flex gap-5 items-center pr-10">
         <BsThreeDots color="white" size={40} />
         <div className="w-full">
@@ -35,20 +36,28 @@ const Analytics = () => {
           <CustomAnalyticBox
             title="All Traffic"
             amount="347.34k"
-            icon={<FaPhone />}
+            icon={<HiMiniArrowTrendingUp />}
           />
 
-          <CustomAnalyticBox
-            title="Spent this month"
-            amount="$682.5"
-            icon={<FaPhone />}
-            reverse
-          />
+          <div
+            className={`flex justify-between  
+             gap-2 md:gap-5 border-[0.1px] p-1 md:p-3 rounded-md `}
+          >
+            <div className="flex flex-col justify-center ">
+              <div className="text-[5px] md:text-xs text-[#CDD0D8] font-medium">
+                Spent this month
+              </div>
+              <h1 className="font-bold text-[8px] md:text-[24px]">$682.5</h1>
+            </div>
+            <div className=" flex justify-center items-center rounded-full h-8 md:h-[56px] w-8 md:w-[56px] bg-[#F6F7FE]">
+              <HiMiniArrowTrendingUp />
+            </div>
+          </div>
 
           <CustomAnalyticBox
             title="Earnings"
             amount="$350.40"
-            icon={<FaPhone />}
+            icon={<HiMiniArrowTrendingUp />}
           />
         </div>
 

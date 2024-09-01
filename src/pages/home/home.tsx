@@ -12,7 +12,16 @@ import IntegratedSocialMedia from "../../components/socialmedia/IntegratedSocial
 const Home = () => {
   return (
     <>
-      <div className=" w-full relative bg-[#1C2792] h-[856px] md:h-[650px]  ">
+      <div className=" w-full relative bg-[#1C2792] h-[856px] md:h-[650px]   ">
+        {/* <div
+          className="absolute opacity-15"
+          style={{
+            height: "100%",
+            width: "100%",
+            background:
+              "linear-gradient(to  top right, #0589F0 0%, #0589F0 100%)",
+          }}
+        ></div> */}
         <div className="absolute bg-[#0097FE] to-[] w-24 md:w-20 h-10 clip-path-polygon-mobile md:clip-path-polygon left-0  bottom-72 opacity-10 md:opacity-20"></div>
         <CustomBorder
           width="180px"
@@ -26,7 +35,7 @@ const Home = () => {
           showRightBorder={true}
           styles="z-10 absolute left-0 top-72 opacity-40 "
         />
-        <div className="absolute bg-gradient-to-tr from-[#0097FE] to-[#1D3EA7]  w-40 md:w-40 h-16 clip-path-polygon-mobile md:clip-path-polygon left-0  -bottom-[116px] opacity-10 md:opacity-40 z-10"></div>
+        <div className=" hidden md:block absolute bg-gradient-to-tr from-[#0097FE] to-[#1D3EA7]  w-40 md:w-40 h-16 clip-path-polygon-mobile md:clip-path-polygon left-0  -bottom-[116px] opacity-10 md:opacity-40 z-10"></div>
 
         <div className="hidden md:block absolute bg-gradient-to-tr from-[#0097FE] to-[#1D3EA7] w-20 md:w-26 h-10 clip-path-polygon-mobile md:clip-path-polygon right-0  top-40 opacity-10 md:opacity-40"></div>
 
@@ -40,10 +49,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="separator-dashboardBottom"></div>
-      <div className="h-20"></div>
+      <div className="separator-dashboardBottom "></div>
 
-      <div className="mt-[70px] md:mt-[220px] lg:mt-[500px]">
+      <div className="mt-[90px] md:mt-[220px] lg:mt-[550px]">
         <TrustedBrands />
       </div>
       <BusinessContinuity />

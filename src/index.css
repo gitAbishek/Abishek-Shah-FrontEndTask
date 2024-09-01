@@ -121,3 +121,13 @@
     pointer-events: none; /* Make sure the shadow doesn’t interfere with user interaction */
     border-radius: inherit; /* Ensure the shadow follows the border-radius of the parent element if any */
   }
+
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 500px;
+    background: linear-gradient(to bottom, #0589F0 0%, transparent 100%);
+    pointer-events: none; /* Allows interaction with content underneath */
+  }
