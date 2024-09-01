@@ -43,7 +43,7 @@ const CustomSocialMediaBox: React.FC<SocialMediaProps> = ({
             <div className="flex justify-center">
               <Button
                 title="Learn More"
-                styles="w-full md:w-[100px] py-2 text-white font-bold text-sm bg-gradient-to-br from-[#6A36FF] to-[#AC5FE6]"
+                styles="w-[100px] md:w-[100px] py-3 text-white font-bold text-sm bg-gradient-to-br from-[#6A36FF] to-[#AC5FE6]"
               />
             </div>
           </div>
