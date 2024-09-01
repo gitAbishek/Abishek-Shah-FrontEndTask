@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import CustomAnalyticBox from "../common/box/CustomAnalyticBox";
-import { FaPhone, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 import CustomSocialMediaBox from "../common/box/CustomSocialMediaBox";
 import { FaSquareFacebook } from "react-icons/fa6";
 import ShadowGraph from "../../assets/dashboard/Shadow.png";

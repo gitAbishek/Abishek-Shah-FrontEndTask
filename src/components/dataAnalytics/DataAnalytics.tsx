@@ -37,7 +37,7 @@ const DataAnalytics = () => {
               <div className="absolute top-0 left-32 flex justify-center items-center rounded-md shadow-md  bg-[#0298EB] h-10 w-10 text-white mb-3">
                 <FaTwitter className="text-[#fff]" />
               </div>
-              <div className="flex flex-col justify-center md:justify-start items-center absolute right-4 md:right-20 -top-28 md:-top-36 rounded-md bg-gradient-to-tl from-[#AC60E5] to-[#0C87F0] p-2 md:p-5">
+              <div className="flex flex-col justify-center md:justify-start items-center absolute right-4 md:right-20 -top-28 md:-top-36 rounded-md bg-gradient-to-tl from-[#AC60E5] to-[#0C87F0] p-2 md:p-5 z-[1000]">
                 <div className="font-bold text-[12px] md:text-[18px] text-white ">
                   Traffic Growth
                 </div>
