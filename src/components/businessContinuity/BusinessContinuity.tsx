@@ -10,7 +10,7 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import Button from "../button/CustomButton";
-import CircularProgress from "./CircularProcess";
+import CircularProgress from "../common/progress/CircularProgress";
 
 const BusinessContinuity = () => {
   return (
@@ -75,13 +75,13 @@ const BusinessContinuity = () => {
               </div>
             </div>
 
-            <div className="flex gap-2 pt-4 w-full">
-              <div className="w-[135px] flex flex-col gap-2 absolute bottom-4 left-4 bg-white custom-box-shadow p-2 skeleton">
+            <div className="w-full flex gap-4 pt-4 ">
+              <div className="w-[130px] flex flex-col gap-2 absolute bottom-4 left-4 bg-white custom-box-shadow p-2 skeleton rounded-md">
                 <div className="w-1/2 border-2 rounded-md border-[#C4D2F6]"></div>
                 <div className="w-full border-2 rounded-md border-[#EDF1FC]"></div>
                 <div className="w-full border-2 rounded-md border-[#EDF1FC]"></div>
               </div>
-              <div className="w-[135px] flex flex-col gap-2 absolute bottom-4 right-4 bg-white custom-box-shadow p-2 skeleton ">
+              <div className="w-[130px] flex flex-col gap-2 absolute bottom-4 right-4 bg-white custom-box-shadow p-2 skeleton rounded-md ">
                 <div className="w-1/2 border-2 rounded-md border-[#C4D2F6]"></div>
                 <div className="w-full border-2 rounded-md border-[#EDF1FC]"></div>
                 <div className="w-full border-2 rounded-md border-[#EDF1FC]"></div>

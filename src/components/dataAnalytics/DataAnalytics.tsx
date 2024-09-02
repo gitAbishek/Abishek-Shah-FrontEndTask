@@ -149,7 +149,7 @@ const DataAnalytics = () => {
                   </div>
                 </div>
 
-                <div className="w-full flex gap-2 flex-col mt-4">
+                <div className="w-full flex gap-2 flex-col mt-2">
                   <div className="w-full border-[4px] rounded-md border-[#EDF1FC]"></div>
                   <div className="flex gap-2 ">
                     <div className="w-full border-[4px] rounded-md border-[#EDF1FC]"></div>

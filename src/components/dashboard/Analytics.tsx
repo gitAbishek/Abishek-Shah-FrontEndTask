@@ -5,9 +5,12 @@ import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 import CustomSocialMediaBox from "../common/box/CustomSocialMediaBox";
 import { FaSquareFacebook } from "react-icons/fa6";
 import ShadowGraph from "../../assets/dashboard/Shadow.png";
-import GraphHorizontal from "../../assets/dashboard/Vector2.png";
 import CreditBalance from "../common/CreditBalance";
 import { HiMiniArrowTrendingUp } from "react-icons/hi2";
+import FiveLineProgress from "../common/progress/FiveLineProgress";
+import FiveLineProgressMobile from "../common/progress/FiveLineProgressMobile";
+import ThreeLineProgress from "../common/progress/ThreeLineProgress";
+import ThreeLineProgressMobile from "../common/progress/ThreeLineProgressMobile";
 
 const Analytics = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -49,15 +52,29 @@ const Analytics = () => {
               </div>
               <h1 className="font-bold text-[8px] md:text-[24px]">$682.5</h1>
             </div>
-            <div className=" flex justify-center items-center rounded-full h-8 md:h-[56px] w-8 md:w-[56px] bg-[#F6F7FE]">
-              <HiMiniArrowTrendingUp />
+            <div className=" flex justify-center items-center rounded-full h-8 md:h-[56px] w-8 md:w-[56px]  pr-2">
+              <div className="hidden md:block">
+                <FiveLineProgress />
+              </div>
+              <div className="block md:hidden">
+                <FiveLineProgressMobile />
+              </div>
             </div>
           </div>
 
           <CustomAnalyticBox
             title="Earnings"
             amount="$350.40"
-            icon={<HiMiniArrowTrendingUp />}
+            icon={
+              <>
+                <div className="hidden md:block">
+                  <ThreeLineProgress />
+                </div>
+                <div className="block md:hidden">
+                  <ThreeLineProgressMobile />
+                </div>{" "}
+              </>
+            }
           />
         </div>
 
@@ -108,11 +125,10 @@ const Analytics = () => {
               <button className="text-center w-12 text-secondary bg-[#e3e7e6] rounded-3xl mt-1 md:mt-5 text-[6px] md:text-xs py-1">
                 +2.45%
               </button>
-              <img
-                src={GraphHorizontal}
-                alt="shadow"
-                className="absolute right-2 md:right-5 top-2 md:top-5 w-auto h-auto "
-              />
+
+              <div className="absolute right-2 md:right-5 top-2 md:top-5 w-auto h-auto">
+                <ThreeLineProgressMobile />
+              </div>
             </div>
             <div>
               <img src={ShadowGraph} alt="GraphHorizontal" className="w-full" />
